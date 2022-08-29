@@ -275,9 +275,7 @@ export default {
 }
 .calendar {
   z-index: 9;
-  position: absolute;
   width: 260px;
-  top: 100%;
   box-shadow: 0px 14px 45px rgba(0, 0, 0, 0.25),
     0px 10px 18px rgba(0, 0, 0, 0.22);
   background: #fff;

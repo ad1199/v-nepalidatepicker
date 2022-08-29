@@ -7,12 +7,13 @@
       @focus="show()"
       :placeholder="this.placeholder"
     />
-    <v-nepalidatepicker-inline
-      v-if="visible"
-      v-bind="$attrs"
-      v-model="formatedValue"
-      @select="hide"
-    ></v-nepalidatepicker-inline>
+    <div class="calendar-container" v-if="visible">
+      <v-nepalidatepicker-inline
+        v-bind="$attrs"
+        v-model="formatedValue"
+        @select="hide"
+      ></v-nepalidatepicker-inline>
+    </div>
   </div>
 </template>
 
@@ -63,5 +64,10 @@ export default {
 }
 .datepicker {
   position: relative;
+}
+
+.calendar-container {
+  position: absolute;
+  top: 100%;
 }
 </style>
