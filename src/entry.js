@@ -1,6 +1,6 @@
 // Import vue component
 import component from "@/v-nepalidatepicker.vue";
-import inlineComponent from "@/v-nepalidatepicker-inlnie";
+import inlineComponent from "@/v-nepalidatepicker-inline.vue";
 
 // install function executed by Vue.use()
 const install = function installVNepalidatepicker(Vue) {

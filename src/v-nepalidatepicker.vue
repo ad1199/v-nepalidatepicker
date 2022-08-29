@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import DatepickerInline from "./v-nepalidatepicker-inline";
+import DatepickerInline from "./v-nepalidatepicker-inline.vue";
 export default {
   components: {
     "v-nepalidatepicker-inline": DatepickerInline,
