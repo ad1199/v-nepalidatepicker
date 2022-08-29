@@ -1,11 +1,12 @@
 // Import vue component
-import component from '@/v-nepalidatepicker.vue';
+import component from "@/v-nepalidatepicker.vue";
+import inlineComponent from "@/v-nepalidatepicker-inlnie";
 
 // install function executed by Vue.use()
 const install = function installVNepalidatepicker(Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component('VNepalidatepicker', component);
+  Vue.component("VNepalidatepicker", component);
 };
 
 // Create module definition for Vue.use()
@@ -16,11 +17,11 @@ const plugin = {
 // To auto-install on non-es builds, when vue is found
 // eslint-disable-next-line no-redeclare
 /* global window, global */
-if ('false' === process.env.ES_BUILD) {
+if ("false" === process.env.ES_BUILD) {
   let GlobalVue = null;
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     GlobalVue = window.Vue;
-  } else if (typeof global !== 'undefined') {
+  } else if (typeof global !== "undefined") {
     GlobalVue = global.Vue;
   }
   if (GlobalVue) {
@@ -34,6 +35,8 @@ component.install = install;
 
 // Export component by default
 export default component;
+
+export { inlineComponent };
 
 // It's possible to expose named exports when writing components that can
 // also be used as directives, etc. - eg. import { RollupDemoDirective } from 'rollup-demo';

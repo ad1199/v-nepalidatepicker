@@ -1,17 +1,22 @@
 <script>
-import Vue from 'vue';
-import VNepalidatepicker from '@/v-nepalidatepicker.vue';
+import Vue from "vue";
+import VNepalidatepicker from "@/v-nepalidatepicker.vue";
 
 export default Vue.extend({
-  name: 'ServeDev',
+  name: "ServeDev",
   components: {
-    VNepalidatepicker
-  }
+    VNepalidatepicker,
+  },
+  data() {
+    return {
+      formatedDate: "",
+    };
+  },
 });
 </script>
 
 <template>
   <div id="app">
-    <v-nepalidatepicker />
+    <v-nepalidatepicker v-model="formatedDate" />
   </div>
 </template>
