@@ -22,10 +22,9 @@
             style="text-align-last:center"
             v-for="(month, index) in getMonthsList"
             :key="month"
-            :label="month"
             :value="index"
           >
-            <!-- {{ month }} -->
+            {{ month }}
           </option>
         </select>
         <select
@@ -40,12 +39,12 @@
             v-for="i in numberofYears"
             :key="i"
             :value="startingYear + (i - 1)"
-            :label="
+          >
+            {{
               formatNepali
                 ? getNepaliDateWithYear(startingYear + (i - 1)).substr(0, 4)
                 : startingYear + (i - 1)
-            "
-          >
+            }}
           </option>
         </select>
         <button icon="el-icon-arrow-right" @click="next()"><b>></b></button>
